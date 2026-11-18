@@ -8,7 +8,7 @@
 # <swiftbar.hideSwiftBar>true</swiftbar.hideSwiftBar>
 #
 # Rafraîchi toutes les 5 min (le .5m du nom) et après chaque clic. Toute la logique est dans
-# bose-keepalive.sh, ce plugin ne fait que l'afficher et l'appeler. Doc : README.md.
+# bose-keepalive.sh, ce plugin ne fait que l'afficher et l'appeler. Doc : README.fr.md (README.md en anglais).
 
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 SELF="${0:A}"; BASE="${SELF:h}"; CTL="$BASE/bose-keepalive.sh"
@@ -35,4 +35,4 @@ for n in -36 -30 -24 -18; do
   coche=""; [[ "$n" == "$niveau" ]] && coche=" checked=true"
   echo "--${n/-/−} dBFS${note} | bash=/bin/zsh param1='$CTL' param2=niveau param3=$n terminal=false refresh=true$coche"
 done
-echo "Documentation | bash=/usr/bin/open param1='$BASE/README.md' terminal=false"
+echo "Documentation | bash=/usr/bin/open param1='$BASE/README.fr.md' terminal=false"
